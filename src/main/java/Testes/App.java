@@ -6,10 +6,10 @@
 
 package Testes;
 
-import br.com.pos.hotel.services.Hotel;
-import br.com.pos.hotel.services.ReservaService;
-import br.com.pos.hotel.services.ReservaServiceService;
+import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
+import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
 import service.AgenciaService;
 import service.Passagens;
 import service.Usuario;
@@ -39,5 +39,13 @@ public class App {
         
         System.out.println(user.toString() + "   " + port.getNomeUsuario("zef"));
         
+        
+        GregorianCalendar cal = new GregorianCalendar(Locale.ROOT);
+        XMLGregorianCalendarImpl data = new XMLGregorianCalendarImpl(cal);
+        
+        List<Voo> voos = port.getVoosPorData(data);
+        for (Voo voo : voos) {
+            System.out.println(voo.getDestino().getNomeCidade());
+        }
     }
 }

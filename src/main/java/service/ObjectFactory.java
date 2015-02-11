@@ -26,8 +26,6 @@ public class ObjectFactory {
 
     private final static QName _GetUsuarioResponse_QNAME = new QName("http://service/", "getUsuarioResponse");
     private final static QName _SalvarUsuarioResponse_QNAME = new QName("http://service/", "salvarUsuarioResponse");
-    private final static QName _GetPassagensPorData_QNAME = new QName("http://service/", "getPassagensPorData");
-    private final static QName _GetPassagensPorDataResponse_QNAME = new QName("http://service/", "getPassagensPorDataResponse");
     private final static QName _GetUsuario_QNAME = new QName("http://service/", "getUsuario");
     private final static QName _SalvarUsuario_QNAME = new QName("http://service/", "salvarUsuario");
     private final static QName _VenderPassagem_QNAME = new QName("http://service/", "venderPassagem");
@@ -109,22 +107,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetPassagensPorDataResponse }
-     * 
-     */
-    public GetPassagensPorDataResponse createGetPassagensPorDataResponse() {
-        return new GetPassagensPorDataResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetPassagensPorData }
-     * 
-     */
-    public GetPassagensPorData createGetPassagensPorData() {
-        return new GetPassagensPorData();
-    }
-
-    /**
      * Create an instance of {@link SalvarUsuarioResponse }
      * 
      */
@@ -141,27 +123,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Usuario }
-     * 
-     */
-    public Usuario createUsuario() {
-        return new Usuario();
-    }
-
-    /**
-     * Create an instance of {@link Passagem }
-     * 
-     */
-    public Passagem createPassagem() {
-        return new Passagem();
-    }
-
-    /**
      * Create an instance of {@link Cidade }
      * 
      */
     public Cidade createCidade() {
         return new Cidade();
+    }
+
+    /**
+     * Create an instance of {@link Usuario }
+     * 
+     */
+    public Usuario createUsuario() {
+        return new Usuario();
     }
 
     /**
@@ -188,24 +162,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service/", name = "salvarUsuarioResponse")
     public JAXBElement<SalvarUsuarioResponse> createSalvarUsuarioResponse(SalvarUsuarioResponse value) {
         return new JAXBElement<SalvarUsuarioResponse>(_SalvarUsuarioResponse_QNAME, SalvarUsuarioResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetPassagensPorData }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "getPassagensPorData")
-    public JAXBElement<GetPassagensPorData> createGetPassagensPorData(GetPassagensPorData value) {
-        return new JAXBElement<GetPassagensPorData>(_GetPassagensPorData_QNAME, GetPassagensPorData.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetPassagensPorDataResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "getPassagensPorDataResponse")
-    public JAXBElement<GetPassagensPorDataResponse> createGetPassagensPorDataResponse(GetPassagensPorDataResponse value) {
-        return new JAXBElement<GetPassagensPorDataResponse>(_GetPassagensPorDataResponse_QNAME, GetPassagensPorDataResponse.class, null, value);
     }
 
     /**
