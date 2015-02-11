@@ -37,8 +37,9 @@ public class App {
         Usuario user = port.getUsuario("zef");
         
         
-        System.out.println(user.toString() + "   " + port.getNomeUsuario("zef"));
+        System.out.println("toString - " + user.toString() + "   " + port.getNomeUsuario("zef"));
         
+        System.out.println("Nome: " + user.getNome());
         
         GregorianCalendar cal = new GregorianCalendar(Locale.ROOT);
         XMLGregorianCalendarImpl data = new XMLGregorianCalendarImpl(cal);

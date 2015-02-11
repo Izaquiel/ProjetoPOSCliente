@@ -28,36 +28,6 @@ public interface AgenciaService {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "salvarUsuario", targetNamespace = "http://service/", className = "service.SalvarUsuario")
-    @ResponseWrapper(localName = "salvarUsuarioResponse", targetNamespace = "http://service/", className = "service.SalvarUsuarioResponse")
-    @Action(input = "http://service/AgenciaService/salvarUsuarioRequest", output = "http://service/AgenciaService/salvarUsuarioResponse")
-    public boolean salvarUsuario(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Usuario arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns service.Usuario
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getUsuario", targetNamespace = "http://service/", className = "service.GetUsuario")
-    @ResponseWrapper(localName = "getUsuarioResponse", targetNamespace = "http://service/", className = "service.GetUsuarioResponse")
-    @Action(input = "http://service/AgenciaService/getUsuarioRequest", output = "http://service/AgenciaService/getUsuarioResponse")
-    public Usuario getUsuario(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      * @return
@@ -78,21 +48,6 @@ public interface AgenciaService {
      * 
      * @param arg0
      * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getNomeUsuario", targetNamespace = "http://service/", className = "service.GetNomeUsuario")
-    @ResponseWrapper(localName = "getNomeUsuarioResponse", targetNamespace = "http://service/", className = "service.GetNomeUsuarioResponse")
-    @Action(input = "http://service/AgenciaService/getNomeUsuarioRequest", output = "http://service/AgenciaService/getNomeUsuarioResponse")
-    public String getNomeUsuario(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
      *     returns java.util.List<service.Voo>
      */
     @WebMethod
@@ -103,5 +58,47 @@ public interface AgenciaService {
     public List<Voo> getVoosPorData(
         @WebParam(name = "arg0", targetNamespace = "")
         XMLGregorianCalendar arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns service.Usuario
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUsuario", targetNamespace = "http://service/", className = "service.GetUsuario")
+    @ResponseWrapper(localName = "getUsuarioResponse", targetNamespace = "http://service/", className = "service.GetUsuarioResponse")
+    @Action(input = "http://service/AgenciaService/getUsuarioRequest", output = "http://service/AgenciaService/getUsuarioResponse")
+    public Usuario getUsuario(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<service.Voo>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTodosVoos", targetNamespace = "http://service/", className = "service.GetTodosVoos")
+    @ResponseWrapper(localName = "getTodosVoosResponse", targetNamespace = "http://service/", className = "service.GetTodosVoosResponse")
+    @Action(input = "http://service/AgenciaService/getTodosVoosRequest", output = "http://service/AgenciaService/getTodosVoosResponse")
+    public List<Voo> getTodosVoos();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "salvarUsuario", targetNamespace = "http://service/", className = "service.SalvarUsuario")
+    @ResponseWrapper(localName = "salvarUsuarioResponse", targetNamespace = "http://service/", className = "service.SalvarUsuarioResponse")
+    @Action(input = "http://service/AgenciaService/salvarUsuarioRequest", output = "http://service/AgenciaService/salvarUsuarioResponse")
+    public boolean salvarUsuario(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Usuario arg0);
 
 }
