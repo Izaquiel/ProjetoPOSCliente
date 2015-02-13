@@ -7,6 +7,7 @@
 package Testes;
 
 import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
@@ -37,14 +38,18 @@ public class App {
         Usuario user = port.getUsuario("zef");
         
         
-        System.out.println("toString - " + user.toString() + "   " + port.getNomeUsuario("zef"));
+        System.out.println("toString - " + user.toString());
         
         System.out.println("Nome: " + user.getNome());
         
-        GregorianCalendar cal = new GregorianCalendar(Locale.ROOT);
+        GregorianCalendar cal = new GregorianCalendar();
+           
+        cal.setGregorianChange(new Date());
+        
         XMLGregorianCalendarImpl data = new XMLGregorianCalendarImpl(cal);
         
         List<Voo> voos = port.getVoosPorData(data);
+        
         for (Voo voo : voos) {
             System.out.println(voo.getDestino().getNomeCidade());
         }
