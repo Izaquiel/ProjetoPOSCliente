@@ -6,8 +6,10 @@
 
 package managed;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import javax.faces.model.SelectItem;
 import service.AgenciaInternaServiceService;
 import service.AgenciaInterno;
 import service.Cidade;
@@ -42,6 +44,17 @@ public class CidadeManaged {
 
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
-    }
+    }    
     
+    public List<SelectItem> getCidades() {
+
+        List<SelectItem> lista = new ArrayList<>();
+
+        List<Cidade> cidades = portInterno.listarCidades();
+
+        for (Cidade c : cidades) {
+            lista.add(new SelectItem(c,c.getNomeCidade()));
+        }
+        return lista;
+    }
 }

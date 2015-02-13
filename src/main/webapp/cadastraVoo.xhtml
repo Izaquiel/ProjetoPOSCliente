@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastro de Voo</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputLabel value="Cidade Origem:"></h:outputLabel>
+            <h:selectOneMenu value="#{Voo.voo.origem}" converter="CidadeConverter">
+                <f:selectItem itemLabel="--Selecione--" noSelectionOption="true" />
+                <f:selectItems value="#{Cidade.cidades}" />        
+            </h:selectOneMenu>
+
+            <h:outputLabel value="Cidade Destino:"></h:outputLabel>
+            <h:selectOneMenu value="#{Voo.voo.destino}" converter="CidadeConverter">
+                <f:selectItem itemLabel="--Selecione--" noSelectionOption="true" />
+                <f:selectItems value="#{Cidade.cidades}" />        
+            </h:selectOneMenu>
+
+            <h:outputLabel value="Valor: "></h:outputLabel>
+            <h:inputText value="#{Voo.voo.valor}" />
+
+            <h:outputLabel value="Quantidade de Vagas: "></h:outputLabel>
+            <h:inputText value="#{Voo.voo.vagas}" />
+        </h:form>
+    </h:body>
+</html>
+

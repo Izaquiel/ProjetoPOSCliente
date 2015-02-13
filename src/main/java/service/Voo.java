@@ -22,7 +22,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="destino" type="{http://service/}cidade" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="origem" type="{http://service/}cidade" minOccurs="0"/>
- *         &lt;element name="vagas" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="vagas" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="valor" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -48,7 +48,7 @@ public class Voo {
     protected Cidade destino;
     protected long id;
     protected Cidade origem;
-    protected int vagas;
+    protected Integer vagas;
     protected Double valor;
 
     /**
@@ -142,16 +142,24 @@ public class Voo {
     /**
      * Gets the value of the vagas property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getVagas() {
+    public Integer getVagas() {
         return vagas;
     }
 
     /**
      * Sets the value of the vagas property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setVagas(int value) {
+    public void setVagas(Integer value) {
         this.vagas = value;
     }
 

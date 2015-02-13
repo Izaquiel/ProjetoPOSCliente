@@ -6,9 +6,10 @@
 
 package managed;
 
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import javax.faces.model.SelectItem;
 import service.AgenciaInternaServiceService;
 import service.AgenciaInterno;
 import service.AgenciaService;
@@ -46,13 +47,6 @@ public class VooManaged {
 //    public List<Voo> listarVoosPorData(){
 //        
 //    }
-    public Passagens getPassagens() {
-        return passagens;
-    }
-
-    public void setPassagens(Passagens passagens) {
-        this.passagens = passagens;
-    }
 
     public Voo getVoo() {
         return voo;
@@ -62,5 +56,15 @@ public class VooManaged {
         this.voo = voo;
     }
     
-    
+    public List<SelectItem> getVoos() {
+
+        List<SelectItem> lista = new ArrayList<>();
+
+        List<Voo> voos = port.getTodosVoos();
+
+        for (Voo v : voos) {
+            lista.add(new SelectItem(v, "Origem - " + v.getOrigem().getNomeCidade() + " / Destino - "+ v.getDestino().getNomeCidade()));
+        }
+        return lista;
+    }
 }
