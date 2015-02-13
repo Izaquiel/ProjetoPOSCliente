@@ -46,5 +46,21 @@ public class VooManaged {
 //    public List<Voo> listarVoosPorData(){
 //        
 //    }
+    public Passagens getPassagens() {
+        return passagens;
+    }
+
+    public void setPassagens(Passagens passagens) {
+        this.passagens = passagens;
+    }
+
+    public Voo getVoo() {
+        return voo;
+    }
+
+    public void setVoo(Voo voo) {
+        this.voo = voo;
+    }
+    
     
 }

@@ -53,4 +53,36 @@ public class PassagemManaged {
 
     }
 
+    public Passagens getPassagens() {
+        return passagens;
+    }
+
+    public void setPassagens(Passagens passagens) {
+        this.passagens = passagens;
+    }
+
+    public Passagem getPassagem() {
+        return passagem;
+    }
+
+    public void setPassagem(Passagem passagem) {
+        this.passagem = passagem;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Voo getVoo() {
+        return voo;
+    }
+
+    public void setVoo(Voo voo) {
+        this.voo = voo;
+    }
+
 }
