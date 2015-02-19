@@ -1,6 +1,7 @@
 
 package service;
 
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -76,4 +77,31 @@ public class Cidade {
         this.nomeCidade = value;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + (int) (this.id ^ (this.id >>> 32));
+        hash = 89 * hash + Objects.hashCode(this.nomeCidade);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cidade other = (Cidade) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        if (!Objects.equals(this.nomeCidade, other.nomeCidade)) {
+            return false;
+        }
+        return true;
+    }
+
+    
 }

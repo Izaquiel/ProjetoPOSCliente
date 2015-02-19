@@ -12,7 +12,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.model.SelectItem;
 import service.AgenciaInternaServiceService;
 import service.AgenciaInterno;
+import service.AgenciaService;
 import service.Cidade;
+import service.Passagens;
 
 /**
  *
@@ -20,6 +22,9 @@ import service.Cidade;
  */
 @ManagedBean(name = "Cidade")
 public class CidadeManaged {
+    
+    Passagens passagens = new Passagens();
+    AgenciaService port = passagens.getAgenciaServicePort();
     
     AgenciaInternaServiceService agenciaInterna = new AgenciaInternaServiceService();
     AgenciaInterno portInterno = agenciaInterna.getAgenciaInternoPort();
@@ -35,7 +40,7 @@ public class CidadeManaged {
     }
     
     public List<Cidade> listarCidades(){
-        return portInterno.listarCidades();
+        return port.getCidades();
     }    
 
     public Cidade getCidade() {
@@ -46,11 +51,11 @@ public class CidadeManaged {
         this.cidade = cidade;
     }    
     
-    public List<SelectItem> getCidades() {
+    public List<SelectItem> listaCidades() {
 
         List<SelectItem> lista = new ArrayList<>();
 
-        List<Cidade> cidades = portInterno.listarCidades();
+        List<Cidade> cidades = port.getCidades();
 
         for (Cidade c : cidades) {
             lista.add(new SelectItem(c,c.getNomeCidade()));

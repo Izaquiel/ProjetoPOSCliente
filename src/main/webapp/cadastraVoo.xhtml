@@ -9,22 +9,26 @@
     <h:body>
         <h:form>
             <h:outputLabel value="Cidade Origem:"></h:outputLabel>
-            <h:selectOneMenu value="#{Voo.voo.origem}" converter="CidadeConverter">
+            <h:selectOneMenu value="#{Voo.voo.origem}" immediate="true" converter="cidadeConverter" 
+                             validator="cidadeValidador">
                 <f:selectItem itemLabel="--Selecione--" noSelectionOption="true" />
-                <f:selectItems value="#{Cidade.cidades}" />        
+                <f:selectItems value="#{Cidade.listaCidades()}" />        
             </h:selectOneMenu>
 
-            <h:outputLabel value="Cidade Destino:"></h:outputLabel>
-            <h:selectOneMenu value="#{Voo.voo.destino}" converter="CidadeConverter">
-                <f:selectItem itemLabel="--Selecione--" noSelectionOption="true" />
-                <f:selectItems value="#{Cidade.cidades}" />        
-            </h:selectOneMenu>
+<!--            <h:outputLabel value="Cidade Destino:"></h:outputLabel>
+            <h:selectOneMenu value="{Voo.voo.destino}" converter="cidadeConverter" 
+                             validator="cidadeValidador">
+                <f:selectItem itemLabel="-Selecione-" noSelectionOption="true" />
+                <f:selectItems value="{Cidade.listaCidades()}" />        
+            </h:selectOneMenu>-->
 
             <h:outputLabel value="Valor: "></h:outputLabel>
             <h:inputText value="#{Voo.voo.valor}" />
 
             <h:outputLabel value="Quantidade de Vagas: "></h:outputLabel>
             <h:inputText value="#{Voo.voo.vagas}" />
+            
+            <h:commandButton value="Salvar" action="#{Voo.salvar()}" ></h:commandButton>
         </h:form>
     </h:body>
 </html>

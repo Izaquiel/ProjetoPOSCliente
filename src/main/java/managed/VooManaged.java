@@ -32,8 +32,11 @@ public class VooManaged {
     Voo voo = new Voo();
     
     
-    public void salvar(){
+    public String salvar(){
+        System.out.println("Entrou no Salvar");
         portInterno.salvarVoo(voo);
+        voo = new Voo();
+        return "faces/index.xhtml";
     }
     
     public void editar(){

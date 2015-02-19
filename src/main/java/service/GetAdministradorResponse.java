@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getNomeUsuarioResponse complex type.
+ * <p>Java class for getAdministradorResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getNomeUsuarioResponse">
+ * &lt;complexType name="getAdministradorResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://service/}administrador" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,23 +27,23 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getNomeUsuarioResponse", propOrder = {
+@XmlType(name = "getAdministradorResponse", propOrder = {
     "_return"
 })
-public class GetNomeUsuarioResponse {
+public class GetAdministradorResponse {
 
     @XmlElement(name = "return")
-    protected String _return;
+    protected Administrador _return;
 
     /**
      * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Administrador }
      *     
      */
-    public String getReturn() {
+    public Administrador getReturn() {
         return _return;
     }
 
@@ -52,10 +52,10 @@ public class GetNomeUsuarioResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Administrador }
      *     
      */
-    public void setReturn(String value) {
+    public void setReturn(Administrador value) {
         this._return = value;
     }
 

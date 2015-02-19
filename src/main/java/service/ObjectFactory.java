@@ -25,7 +25,6 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _EditarUsuarioResponse_QNAME = new QName("http://service/", "editarUsuarioResponse");
-    private final static QName _ListarCidades_QNAME = new QName("http://service/", "listarCidades");
     private final static QName _GetVooPorIdResponse_QNAME = new QName("http://service/", "getVooPorIdResponse");
     private final static QName _GetTodosUsuarios_QNAME = new QName("http://service/", "getTodosUsuarios");
     private final static QName _EditarCidadeResponse_QNAME = new QName("http://service/", "editarCidadeResponse");
@@ -33,9 +32,8 @@ public class ObjectFactory {
     private final static QName _SalvarVooResponse_QNAME = new QName("http://service/", "salvarVooResponse");
     private final static QName _GetCidadePorId_QNAME = new QName("http://service/", "getCidadePorId");
     private final static QName _EditarVooResponse_QNAME = new QName("http://service/", "editarVooResponse");
-    private final static QName _GetVooPorId_QNAME = new QName("http://service/", "getVooPorId");
     private final static QName _ListarPassagens_QNAME = new QName("http://service/", "listarPassagens");
-    private final static QName _ListarCidadesResponse_QNAME = new QName("http://service/", "listarCidadesResponse");
+    private final static QName _GetVooPorId_QNAME = new QName("http://service/", "getVooPorId");
     private final static QName _SalvarCidade_QNAME = new QName("http://service/", "salvarCidade");
     private final static QName _SalvarCidadeResponse_QNAME = new QName("http://service/", "salvarCidadeResponse");
     private final static QName _EditarPassagem_QNAME = new QName("http://service/", "editarPassagem");
@@ -143,14 +141,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarCidadesResponse }
-     * 
-     */
-    public ListarCidadesResponse createListarCidadesResponse() {
-        return new ListarCidadesResponse();
-    }
-
-    /**
      * Create an instance of {@link GetVooPorId }
      * 
      */
@@ -215,14 +205,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarCidades }
-     * 
-     */
-    public ListarCidades createListarCidades() {
-        return new ListarCidades();
-    }
-
-    /**
      * Create an instance of {@link EditarUsuarioResponse }
      * 
      */
@@ -255,6 +237,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Pessoa }
+     * 
+     */
+    public Pessoa createPessoa() {
+        return new Pessoa();
+    }
+
+    /**
      * Create an instance of {@link Cidade }
      * 
      */
@@ -269,15 +259,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service/", name = "editarUsuarioResponse")
     public JAXBElement<EditarUsuarioResponse> createEditarUsuarioResponse(EditarUsuarioResponse value) {
         return new JAXBElement<EditarUsuarioResponse>(_EditarUsuarioResponse_QNAME, EditarUsuarioResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarCidades }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "listarCidades")
-    public JAXBElement<ListarCidades> createListarCidades(ListarCidades value) {
-        return new JAXBElement<ListarCidades>(_ListarCidades_QNAME, ListarCidades.class, null, value);
     }
 
     /**
@@ -344,15 +325,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetVooPorId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "getVooPorId")
-    public JAXBElement<GetVooPorId> createGetVooPorId(GetVooPorId value) {
-        return new JAXBElement<GetVooPorId>(_GetVooPorId_QNAME, GetVooPorId.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ListarPassagens }{@code >}}
      * 
      */
@@ -362,12 +334,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarCidadesResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetVooPorId }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "listarCidadesResponse")
-    public JAXBElement<ListarCidadesResponse> createListarCidadesResponse(ListarCidadesResponse value) {
-        return new JAXBElement<ListarCidadesResponse>(_ListarCidadesResponse_QNAME, ListarCidadesResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getVooPorId")
+    public JAXBElement<GetVooPorId> createGetVooPorId(GetVooPorId value) {
+        return new JAXBElement<GetVooPorId>(_GetVooPorId_QNAME, GetVooPorId.class, null, value);
     }
 
     /**

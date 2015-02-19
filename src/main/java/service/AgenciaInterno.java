@@ -28,65 +28,17 @@ public interface AgenciaInterno {
     /**
      * 
      * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "editarPassagem", targetNamespace = "http://service/", className = "service.EditarPassagem")
-    @ResponseWrapper(localName = "editarPassagemResponse", targetNamespace = "http://service/", className = "service.EditarPassagemResponse")
-    @Action(input = "http://service/AgenciaInterno/editarPassagemRequest", output = "http://service/AgenciaInterno/editarPassagemResponse")
-    public void editarPassagem(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Passagem arg0);
-
-    /**
-     * 
      * @return
-     *     returns java.util.List<service.Passagem>
+     *     returns service.Voo
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarPassagens", targetNamespace = "http://service/", className = "service.ListarPassagens")
-    @ResponseWrapper(localName = "listarPassagensResponse", targetNamespace = "http://service/", className = "service.ListarPassagensResponse")
-    @Action(input = "http://service/AgenciaInterno/listarPassagensRequest", output = "http://service/AgenciaInterno/listarPassagensResponse")
-    public List<Passagem> listarPassagens();
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<service.Usuario>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTodosUsuarios", targetNamespace = "http://service/", className = "service.GetTodosUsuarios")
-    @ResponseWrapper(localName = "getTodosUsuariosResponse", targetNamespace = "http://service/", className = "service.GetTodosUsuariosResponse")
-    @Action(input = "http://service/AgenciaInterno/getTodosUsuariosRequest", output = "http://service/AgenciaInterno/getTodosUsuariosResponse")
-    public List<Usuario> getTodosUsuarios();
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns service.Cidade
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCidadePorId", targetNamespace = "http://service/", className = "service.GetCidadePorId")
-    @ResponseWrapper(localName = "getCidadePorIdResponse", targetNamespace = "http://service/", className = "service.GetCidadePorIdResponse")
-    @Action(input = "http://service/AgenciaInterno/getCidadePorIdRequest", output = "http://service/AgenciaInterno/getCidadePorIdResponse")
-    public Cidade getCidadePorId(
+    @RequestWrapper(localName = "getVooPorId", targetNamespace = "http://service/", className = "service.GetVooPorId")
+    @ResponseWrapper(localName = "getVooPorIdResponse", targetNamespace = "http://service/", className = "service.GetVooPorIdResponse")
+    @Action(input = "http://service/AgenciaInterno/getVooPorIdRequest", output = "http://service/AgenciaInterno/getVooPorIdResponse")
+    public Voo getVooPorId(
         @WebParam(name = "arg0", targetNamespace = "")
         long arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<service.Cidade>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarCidades", targetNamespace = "http://service/", className = "service.ListarCidades")
-    @ResponseWrapper(localName = "listarCidadesResponse", targetNamespace = "http://service/", className = "service.ListarCidadesResponse")
-    @Action(input = "http://service/AgenciaInterno/listarCidadesRequest", output = "http://service/AgenciaInterno/listarCidadesResponse")
-    public List<Cidade> listarCidades();
 
     /**
      * 
@@ -97,6 +49,18 @@ public interface AgenciaInterno {
     @ResponseWrapper(localName = "salvarVooResponse", targetNamespace = "http://service/", className = "service.SalvarVooResponse")
     @Action(input = "http://service/AgenciaInterno/salvarVooRequest", output = "http://service/AgenciaInterno/salvarVooResponse")
     public void salvarVoo(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Voo arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "editarVoo", targetNamespace = "http://service/", className = "service.EditarVoo")
+    @ResponseWrapper(localName = "editarVooResponse", targetNamespace = "http://service/", className = "service.EditarVooResponse")
+    @Action(input = "http://service/AgenciaInterno/editarVooRequest", output = "http://service/AgenciaInterno/editarVooResponse")
+    public void editarVoo(
         @WebParam(name = "arg0", targetNamespace = "")
         Voo arg0);
 
@@ -127,21 +91,6 @@ public interface AgenciaInterno {
     /**
      * 
      * @param arg0
-     * @return
-     *     returns service.Voo
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getVooPorId", targetNamespace = "http://service/", className = "service.GetVooPorId")
-    @ResponseWrapper(localName = "getVooPorIdResponse", targetNamespace = "http://service/", className = "service.GetVooPorIdResponse")
-    @Action(input = "http://service/AgenciaInterno/getVooPorIdRequest", output = "http://service/AgenciaInterno/getVooPorIdResponse")
-    public Voo getVooPorId(
-        @WebParam(name = "arg0", targetNamespace = "")
-        long arg0);
-
-    /**
-     * 
-     * @param arg0
      */
     @WebMethod
     @RequestWrapper(localName = "salvarCidade", targetNamespace = "http://service/", className = "service.SalvarCidade")
@@ -156,11 +105,50 @@ public interface AgenciaInterno {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "editarVoo", targetNamespace = "http://service/", className = "service.EditarVoo")
-    @ResponseWrapper(localName = "editarVooResponse", targetNamespace = "http://service/", className = "service.EditarVooResponse")
-    @Action(input = "http://service/AgenciaInterno/editarVooRequest", output = "http://service/AgenciaInterno/editarVooResponse")
-    public void editarVoo(
+    @RequestWrapper(localName = "editarPassagem", targetNamespace = "http://service/", className = "service.EditarPassagem")
+    @ResponseWrapper(localName = "editarPassagemResponse", targetNamespace = "http://service/", className = "service.EditarPassagemResponse")
+    @Action(input = "http://service/AgenciaInterno/editarPassagemRequest", output = "http://service/AgenciaInterno/editarPassagemResponse")
+    public void editarPassagem(
         @WebParam(name = "arg0", targetNamespace = "")
-        Voo arg0);
+        Passagem arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns service.Cidade
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCidadePorId", targetNamespace = "http://service/", className = "service.GetCidadePorId")
+    @ResponseWrapper(localName = "getCidadePorIdResponse", targetNamespace = "http://service/", className = "service.GetCidadePorIdResponse")
+    @Action(input = "http://service/AgenciaInterno/getCidadePorIdRequest", output = "http://service/AgenciaInterno/getCidadePorIdResponse")
+    public Cidade getCidadePorId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        long arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<service.Usuario>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTodosUsuarios", targetNamespace = "http://service/", className = "service.GetTodosUsuarios")
+    @ResponseWrapper(localName = "getTodosUsuariosResponse", targetNamespace = "http://service/", className = "service.GetTodosUsuariosResponse")
+    @Action(input = "http://service/AgenciaInterno/getTodosUsuariosRequest", output = "http://service/AgenciaInterno/getTodosUsuariosResponse")
+    public List<Usuario> getTodosUsuarios();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<service.Passagem>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarPassagens", targetNamespace = "http://service/", className = "service.ListarPassagens")
+    @ResponseWrapper(localName = "listarPassagensResponse", targetNamespace = "http://service/", className = "service.ListarPassagensResponse")
+    @Action(input = "http://service/AgenciaInterno/listarPassagensRequest", output = "http://service/AgenciaInterno/listarPassagensResponse")
+    public List<Passagem> listarPassagens();
 
 }
