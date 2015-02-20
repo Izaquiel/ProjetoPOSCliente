@@ -83,7 +83,7 @@ public class Cidade {
         hash = 89 * hash + (int) (this.id ^ (this.id >>> 32));
         hash = 89 * hash + Objects.hashCode(this.nomeCidade);
         return hash;
-    }
+}
 
     @Override
     public boolean equals(Object obj) {

@@ -35,7 +35,8 @@ import javax.xml.bind.annotation.XmlType;
     "nome"
 })
 @XmlSeeAlso({
-    Usuario.class
+    Usuario.class,
+    Administrador.class
 })
 public class Pessoa {
 

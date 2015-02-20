@@ -102,7 +102,6 @@ public class Voo {
     /**
      * Gets the value of the id property.
      * 
-     * @return 
      */
     public long getId() {
         return id;
@@ -111,7 +110,6 @@ public class Voo {
     /**
      * Sets the value of the id property.
      * 
-     * @param value
      */
     public void setId(long value) {
         this.id = value;
@@ -194,7 +192,7 @@ public class Voo {
         int hash = 5;
         hash = 11 * hash + (int) (this.id ^ (this.id >>> 32));
         return hash;
-    }
+}
 
     @Override
     public boolean equals(Object obj) {
