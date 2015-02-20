@@ -31,8 +31,10 @@ public class CidadeManaged {
     
     Cidade cidade = new Cidade();
     
-    public void salvar(){
+    public String salvar(){
         portInterno.salvarCidade(cidade);
+        cidade = new Cidade();
+        return null;
     }
     
     public void editar(){

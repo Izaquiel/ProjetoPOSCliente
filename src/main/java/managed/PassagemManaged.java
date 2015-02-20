@@ -7,6 +7,7 @@ package managed;
 
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import javax.persistence.NoResultException;
 import service.AgenciaInternaServiceService;
 import service.AgenciaInterno;
 import service.AgenciaService;
@@ -29,14 +30,21 @@ public class PassagemManaged {
     AgenciaInterno portInterno = agenciaInterna.getAgenciaInternoPort();
 
     Passagem passagem = new Passagem();
-    Usuario usuario = new Usuario();
+    Usuario usuario;
     Voo voo = new Voo();
 
-    public void salvar() {
-        port.venderPassagem(voo.getId(), usuario);
-        passagem = new Passagem();
-        usuario = new Usuario();
-        voo = new Voo();
+    public String salvar() {
+        try {
+            usuario = port.getUsuario(passagem.getUsuario().getCpf());
+            port.venderPassagem(passagem.getVoo().getId(), usuario);
+            passagem = new Passagem();
+            usuario = new Usuario();
+            return null;
+        } catch (NoResultException e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     public void editar() {

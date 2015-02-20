@@ -36,7 +36,6 @@ public class VooManaged {
     Date dataAux;
     
     public String salvar(){
-        System.out.println("Entrou no Salvar");
         GregorianCalendar cal = new GregorianCalendar(); 
         cal.setTimeInMillis(dataAux.getTime());        
         XMLGregorianCalendarImpl data = new XMLGregorianCalendarImpl(cal);
@@ -57,10 +56,6 @@ public class VooManaged {
     
     public void editar(){
         portInterno.editarVoo(voo);
-    }
-    
-    public List<Voo> listarVoos(){
-        return port.getTodosVoos();
     }
     
 //    public List<Voo> listarVoosPorData(){
