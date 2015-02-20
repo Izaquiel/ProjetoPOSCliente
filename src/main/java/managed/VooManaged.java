@@ -6,7 +6,10 @@
 
 package managed;
 
+import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.model.SelectItem;
@@ -30,13 +33,26 @@ public class VooManaged {
     AgenciaInterno portInterno = agenciaInterna.getAgenciaInternoPort();
     
     Voo voo = new Voo();
-    
+    Date dataAux;
     
     public String salvar(){
         System.out.println("Entrou no Salvar");
+        GregorianCalendar cal = new GregorianCalendar(); 
+        cal.setTimeInMillis(dataAux.getTime());        
+        XMLGregorianCalendarImpl data = new XMLGregorianCalendarImpl(cal);
+        voo.setDataVoo(data);
         portInterno.salvarVoo(voo);
         voo = new Voo();
-        return "faces/index.xhtml";
+        dataAux = null;
+        return null;
+    }
+
+    public Date getDataAux() {
+        return dataAux;
+    }
+
+    public void setDataAux(Date dataAux) {
+        this.dataAux = dataAux;
     }
     
     public void editar(){

@@ -38,6 +38,7 @@ public class UsuarioManaged {
         
         port.salvarUsuario(usuario);
         usuario = new Usuario();
+        dataAux = null;
     }
 
     public Date getDataAux() {

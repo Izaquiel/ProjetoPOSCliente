@@ -9,25 +9,30 @@
     <h:body>
         <h:form>
             <h:outputLabel value="Cidade Origem:"></h:outputLabel>
-            <h:selectOneMenu value="#{Voo.voo.origem}" immediate="true" converter="cidadeConverter" 
-                             validator="cidadeValidador">
+            <h:selectOneMenu value="#{Voo.voo.origem}" immediate="true" converter="cidadeConverter" >
                 <f:selectItem itemLabel="--Selecione--" noSelectionOption="true" />
                 <f:selectItems value="#{Cidade.listaCidades()}" />        
             </h:selectOneMenu>
 
-<!--            <h:outputLabel value="Cidade Destino:"></h:outputLabel>
-            <h:selectOneMenu value="{Voo.voo.destino}" converter="cidadeConverter" 
+            <h:outputLabel value="Cidade Destino:"></h:outputLabel>
+            <h:selectOneMenu value="#{Voo.voo.destino}" converter="cidadeConverter" 
                              validator="cidadeValidador">
-                <f:selectItem itemLabel="-Selecione-" noSelectionOption="true" />
-                <f:selectItems value="{Cidade.listaCidades()}" />        
-            </h:selectOneMenu>-->
+                <f:selectItem itemLabel="--Selecione--" noSelectionOption="true" />
+                <f:selectItems value="#{Cidade.listaCidades()}" />        
+            </h:selectOneMenu>
 
             <h:outputLabel value="Valor: "></h:outputLabel>
             <h:inputText value="#{Voo.voo.valor}" />
 
             <h:outputLabel value="Quantidade de Vagas: "></h:outputLabel>
             <h:inputText value="#{Voo.voo.vagas}" />
-            
+
+            <h:outputLabel value="Data do Voo: "></h:outputLabel>
+            <h:inputText value="#{Voo.dataAux}" >
+                <f:passThroughAttribute name="type" value="date" />
+                <f:convertDateTime type="date" pattern="yyyy-MM-dd" timeZone="GMT-3"/>
+            </h:inputText>
+
             <h:commandButton value="Salvar" action="#{Voo.salvar()}" ></h:commandButton>
         </h:form>
     </h:body>

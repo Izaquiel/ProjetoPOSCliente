@@ -30,26 +30,16 @@ public class CidadeConverter implements Converter{
         if (value == null || value.equals("") || value.equalsIgnoreCase("--selecione--")) {
             return null;
         } else {
-            try{
             Cidade cidade = port.getCidadePorId(Long.parseLong(value));
             return cidade;
-            }catch(RuntimeException e){
-                e.printStackTrace();
-                return null;
-            }
         }
     }
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
          if (value instanceof Cidade) {
-             try{
             Cidade cidade = (Cidade) value;
             return String.valueOf(cidade.getId());      
-             }catch(Exception e){
-                 e.printStackTrace();
-                 return null;
-             }
         } else {
             return null;
         }
