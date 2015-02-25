@@ -5,9 +5,6 @@
  */
 package managed;
 
-import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
 import javax.faces.bean.ManagedBean;

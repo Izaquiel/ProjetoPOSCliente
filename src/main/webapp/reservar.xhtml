@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastro de Reserva</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            <h:outputLabel value="Nome do Usuário"></h:outputLabel>
+            <h:inputText value="#{Hotel.nome}"></h:inputText>
+            
+            <h:outputLabel value="Documento do Usuário"></h:outputLabel>
+            <h:inputText value="#{Hotel.documento}"></h:inputText>
+            
+            <h:outputLabel value="Data de Entrada"></h:outputLabel>
+            <h:inputText value="#{Hotel.dataEntrada}">
+                <f:passThroughAttribute name="type" value="date" />
+                <f:convertDateTime type="date" pattern="yyyy-MM-dd" timeZone="GMT-3"/>
+            </h:inputText>
+            
+            <h:outputLabel value="Data de Saída"></h:outputLabel>
+            <h:inputText value="#{Hotel.dataSaida}">
+                <f:passThroughAttribute name="type" value="date" />
+                <f:convertDateTime type="date" pattern="yyyy-MM-dd" timeZone="GMT-3"/>
+            </h:inputText>
+            
+        </h:form>
+    </h:body>
+</html>
+
