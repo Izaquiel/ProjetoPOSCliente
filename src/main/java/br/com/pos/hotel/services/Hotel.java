@@ -177,7 +177,7 @@ public class Hotel {
         int hash = 7;
         hash = 97 * hash + this.id;
         return hash;
-    }
+}
 
     @Override
     public boolean equals(Object obj) {

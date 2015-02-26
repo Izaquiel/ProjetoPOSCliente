@@ -111,7 +111,7 @@ public class Quarto {
         int hash = 7;
         hash = 13 * hash + this.id;
         return hash;
-    }
+}
 
     @Override
     public boolean equals(Object obj) {

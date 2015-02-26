@@ -16,7 +16,6 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
@@ -66,6 +65,7 @@ public class HotelManaged {
     }
 
     public String quartos() {
+        
         return "reservaQuarto.jsp";
     }
 

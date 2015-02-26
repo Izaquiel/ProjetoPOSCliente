@@ -185,14 +185,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Cliente }
-     * 
-     */
-    public Cliente createCliente() {
-        return new Cliente();
-    }
-
-    /**
      * Create an instance of {@link Carro }
      * 
      */

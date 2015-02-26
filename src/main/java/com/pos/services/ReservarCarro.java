@@ -19,7 +19,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="arg1" type="{http://services.pos.com/}cliente" minOccurs="0"/>
+ *         &lt;element name="arg1" type="{http://services.pos.com/}pessoa" minOccurs="0"/>
  *         &lt;element name="arg2" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="arg3" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *       &lt;/sequence>
@@ -40,7 +40,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class ReservarCarro {
 
     protected int arg0;
-    protected Cliente arg1;
+    protected Pessoa arg1;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar arg2;
     @XmlSchemaType(name = "dateTime")
@@ -67,10 +67,10 @@ public class ReservarCarro {
      * 
      * @return
      *     possible object is
-     *     {@link Cliente }
+     *     {@link Pessoa }
      *     
      */
-    public Cliente getArg1() {
+    public Pessoa getArg1() {
         return arg1;
     }
 
@@ -79,10 +79,10 @@ public class ReservarCarro {
      * 
      * @param value
      *     allowed object is
-     *     {@link Cliente }
+     *     {@link Pessoa }
      *     
      */
-    public void setArg1(Cliente value) {
+    public void setArg1(Pessoa value) {
         this.arg1 = value;
     }
 
