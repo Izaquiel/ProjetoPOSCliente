@@ -24,11 +24,13 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _LoginPessoaResponse_QNAME = new QName("http://services.pos.com/", "loginPessoaResponse");
     private final static QName _GetLocadoraPorId_QNAME = new QName("http://services.pos.com/", "getLocadoraPorId");
+    private final static QName _LoginPessoa_QNAME = new QName("http://services.pos.com/", "loginPessoa");
     private final static QName _GetCarroPorIdResponse_QNAME = new QName("http://services.pos.com/", "getCarroPorIdResponse");
+    private final static QName _GetLocadorasResponse_QNAME = new QName("http://services.pos.com/", "getLocadorasResponse");
     private final static QName _OnConstructResponse_QNAME = new QName("http://services.pos.com/", "onConstructResponse");
     private final static QName _GetLocadoraPorIdResponse_QNAME = new QName("http://services.pos.com/", "getLocadoraPorIdResponse");
-    private final static QName _GetLocadorasResponse_QNAME = new QName("http://services.pos.com/", "getLocadorasResponse");
     private final static QName _OnDestroy_QNAME = new QName("http://services.pos.com/", "onDestroy");
     private final static QName _GetLocadoras_QNAME = new QName("http://services.pos.com/", "getLocadoras");
     private final static QName _OnConstruct_QNAME = new QName("http://services.pos.com/", "onConstruct");
@@ -129,6 +131,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OnConstructResponse }
+     * 
+     */
+    public OnConstructResponse createOnConstructResponse() {
+        return new OnConstructResponse();
+    }
+
+    /**
      * Create an instance of {@link GetLocadoraPorIdResponse }
      * 
      */
@@ -142,14 +152,6 @@ public class ObjectFactory {
      */
     public GetLocadorasResponse createGetLocadorasResponse() {
         return new GetLocadorasResponse();
-    }
-
-    /**
-     * Create an instance of {@link OnConstructResponse }
-     * 
-     */
-    public OnConstructResponse createOnConstructResponse() {
-        return new OnConstructResponse();
     }
 
     /**
@@ -169,11 +171,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link LoginPessoaResponse }
+     * 
+     */
+    public LoginPessoaResponse createLoginPessoaResponse() {
+        return new LoginPessoaResponse();
+    }
+
+    /**
      * Create an instance of {@link GetCarroPorIdResponse }
      * 
      */
     public GetCarroPorIdResponse createGetCarroPorIdResponse() {
         return new GetCarroPorIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link LoginPessoa }
+     * 
+     */
+    public LoginPessoa createLoginPessoa() {
+        return new LoginPessoa();
     }
 
     /**
@@ -209,6 +227,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginPessoaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "loginPessoaResponse")
+    public JAXBElement<LoginPessoaResponse> createLoginPessoaResponse(LoginPessoaResponse value) {
+        return new JAXBElement<LoginPessoaResponse>(_LoginPessoaResponse_QNAME, LoginPessoaResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetLocadoraPorId }{@code >}}
      * 
      */
@@ -218,12 +245,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginPessoa }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "loginPessoa")
+    public JAXBElement<LoginPessoa> createLoginPessoa(LoginPessoa value) {
+        return new JAXBElement<LoginPessoa>(_LoginPessoa_QNAME, LoginPessoa.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetCarroPorIdResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.pos.com/", name = "getCarroPorIdResponse")
     public JAXBElement<GetCarroPorIdResponse> createGetCarroPorIdResponse(GetCarroPorIdResponse value) {
         return new JAXBElement<GetCarroPorIdResponse>(_GetCarroPorIdResponse_QNAME, GetCarroPorIdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLocadorasResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getLocadorasResponse")
+    public JAXBElement<GetLocadorasResponse> createGetLocadorasResponse(GetLocadorasResponse value) {
+        return new JAXBElement<GetLocadorasResponse>(_GetLocadorasResponse_QNAME, GetLocadorasResponse.class, null, value);
     }
 
     /**
@@ -242,15 +287,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://services.pos.com/", name = "getLocadoraPorIdResponse")
     public JAXBElement<GetLocadoraPorIdResponse> createGetLocadoraPorIdResponse(GetLocadoraPorIdResponse value) {
         return new JAXBElement<GetLocadoraPorIdResponse>(_GetLocadoraPorIdResponse_QNAME, GetLocadoraPorIdResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetLocadorasResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getLocadorasResponse")
-    public JAXBElement<GetLocadorasResponse> createGetLocadorasResponse(GetLocadorasResponse value) {
-        return new JAXBElement<GetLocadorasResponse>(_GetLocadorasResponse_QNAME, GetLocadorasResponse.class, null, value);
     }
 
     /**

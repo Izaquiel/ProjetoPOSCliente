@@ -34,21 +34,6 @@ public interface ReservaService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getListaQuartosDesocupados", targetNamespace = "http://services.hotel.pos.com.br/", className = "br.com.pos.hotel.services.GetListaQuartosDesocupados")
-    @ResponseWrapper(localName = "getListaQuartosDesocupadosResponse", targetNamespace = "http://services.hotel.pos.com.br/", className = "br.com.pos.hotel.services.GetListaQuartosDesocupadosResponse")
-    @Action(input = "http://services.hotel.pos.com.br/ReservaService/getListaQuartosDesocupadosRequest", output = "http://services.hotel.pos.com.br/ReservaService/getListaQuartosDesocupadosResponse")
-    public List<Quarto> getListaQuartosDesocupados(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<br.com.pos.hotel.services.Quarto>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "getListaQuartosDesocupadosPorIdHotel", targetNamespace = "http://services.hotel.pos.com.br/", className = "br.com.pos.hotel.services.GetListaQuartosDesocupadosPorIdHotel")
     @ResponseWrapper(localName = "getListaQuartosDesocupadosPorIdHotelResponse", targetNamespace = "http://services.hotel.pos.com.br/", className = "br.com.pos.hotel.services.GetListaQuartosDesocupadosPorIdHotelResponse")
     @Action(input = "http://services.hotel.pos.com.br/ReservaService/getListaQuartosDesocupadosPorIdHotelRequest", output = "http://services.hotel.pos.com.br/ReservaService/getListaQuartosDesocupadosPorIdHotelResponse")
@@ -139,5 +124,20 @@ public interface ReservaService {
     @ResponseWrapper(localName = "getListaReservasResponse", targetNamespace = "http://services.hotel.pos.com.br/", className = "br.com.pos.hotel.services.GetListaReservasResponse")
     @Action(input = "http://services.hotel.pos.com.br/ReservaService/getListaReservasRequest", output = "http://services.hotel.pos.com.br/ReservaService/getListaReservasResponse")
     public List<Reserva> getListaReservas();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<br.com.pos.hotel.services.Quarto>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getListaQuartosDesocupados", targetNamespace = "http://services.hotel.pos.com.br/", className = "br.com.pos.hotel.services.GetListaQuartosDesocupados")
+    @ResponseWrapper(localName = "getListaQuartosDesocupadosResponse", targetNamespace = "http://services.hotel.pos.com.br/", className = "br.com.pos.hotel.services.GetListaQuartosDesocupadosResponse")
+    @Action(input = "http://services.hotel.pos.com.br/ReservaService/getListaQuartosDesocupadosRequest", output = "http://services.hotel.pos.com.br/ReservaService/getListaQuartosDesocupadosResponse")
+    public List<Quarto> getListaQuartosDesocupados(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
 }

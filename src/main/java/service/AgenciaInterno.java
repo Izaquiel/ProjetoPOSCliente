@@ -27,18 +27,6 @@ public interface AgenciaInterno {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<service.Passagem>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarPassagens", targetNamespace = "http://service/", className = "service.ListarPassagens")
-    @ResponseWrapper(localName = "listarPassagensResponse", targetNamespace = "http://service/", className = "service.ListarPassagensResponse")
-    @Action(input = "http://service/AgenciaInterno/listarPassagensRequest", output = "http://service/AgenciaInterno/listarPassagensResponse")
-    public List<Passagem> listarPassagens();
-
-    /**
-     * 
      * @param arg0
      */
     @WebMethod
@@ -63,6 +51,18 @@ public interface AgenciaInterno {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<service.Passagem>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarPassagens", targetNamespace = "http://service/", className = "service.ListarPassagens")
+    @ResponseWrapper(localName = "listarPassagensResponse", targetNamespace = "http://service/", className = "service.ListarPassagensResponse")
+    @Action(input = "http://service/AgenciaInterno/listarPassagensRequest", output = "http://service/AgenciaInterno/listarPassagensResponse")
+    public List<Passagem> listarPassagens();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns service.Cidade
@@ -79,38 +79,17 @@ public interface AgenciaInterno {
     /**
      * 
      * @param arg0
+     * @return
+     *     returns service.Administrador
      */
     @WebMethod
-    @RequestWrapper(localName = "salvarVoo", targetNamespace = "http://service/", className = "service.SalvarVoo")
-    @ResponseWrapper(localName = "salvarVooResponse", targetNamespace = "http://service/", className = "service.SalvarVooResponse")
-    @Action(input = "http://service/AgenciaInterno/salvarVooRequest", output = "http://service/AgenciaInterno/salvarVooResponse")
-    public void salvarVoo(
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAdminPorCpf", targetNamespace = "http://service/", className = "service.GetAdminPorCpf")
+    @ResponseWrapper(localName = "getAdminPorCpfResponse", targetNamespace = "http://service/", className = "service.GetAdminPorCpfResponse")
+    @Action(input = "http://service/AgenciaInterno/getAdminPorCpfRequest", output = "http://service/AgenciaInterno/getAdminPorCpfResponse")
+    public Administrador getAdminPorCpf(
         @WebParam(name = "arg0", targetNamespace = "")
-        Voo arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "salvarAdmin", targetNamespace = "http://service/", className = "service.SalvarAdmin")
-    @ResponseWrapper(localName = "salvarAdminResponse", targetNamespace = "http://service/", className = "service.SalvarAdminResponse")
-    @Action(input = "http://service/AgenciaInterno/salvarAdminRequest", output = "http://service/AgenciaInterno/salvarAdminResponse")
-    public void salvarAdmin(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Administrador arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "salvarCidade", targetNamespace = "http://service/", className = "service.SalvarCidade")
-    @ResponseWrapper(localName = "salvarCidadeResponse", targetNamespace = "http://service/", className = "service.SalvarCidadeResponse")
-    @Action(input = "http://service/AgenciaInterno/salvarCidadeRequest", output = "http://service/AgenciaInterno/salvarCidadeResponse")
-    public void salvarCidade(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Cidade arg0);
+        String arg0);
 
     /**
      * 
@@ -141,18 +120,6 @@ public interface AgenciaInterno {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "editarAdmin", targetNamespace = "http://service/", className = "service.EditarAdmin")
-    @ResponseWrapper(localName = "editarAdminResponse", targetNamespace = "http://service/", className = "service.EditarAdminResponse")
-    @Action(input = "http://service/AgenciaInterno/editarAdminRequest", output = "http://service/AgenciaInterno/editarAdminResponse")
-    public void editarAdmin(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Administrador arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
     @RequestWrapper(localName = "editarVoo", targetNamespace = "http://service/", className = "service.EditarVoo")
     @ResponseWrapper(localName = "editarVooResponse", targetNamespace = "http://service/", className = "service.EditarVooResponse")
     @Action(input = "http://service/AgenciaInterno/editarVooRequest", output = "http://service/AgenciaInterno/editarVooResponse")
@@ -162,15 +129,27 @@ public interface AgenciaInterno {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<service.Administrador>
+     * @param arg0
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarAdmins", targetNamespace = "http://service/", className = "service.ListarAdmins")
-    @ResponseWrapper(localName = "listarAdminsResponse", targetNamespace = "http://service/", className = "service.ListarAdminsResponse")
-    @Action(input = "http://service/AgenciaInterno/listarAdminsRequest", output = "http://service/AgenciaInterno/listarAdminsResponse")
-    public List<Administrador> listarAdmins();
+    @RequestWrapper(localName = "salvarVoo", targetNamespace = "http://service/", className = "service.SalvarVoo")
+    @ResponseWrapper(localName = "salvarVooResponse", targetNamespace = "http://service/", className = "service.SalvarVooResponse")
+    @Action(input = "http://service/AgenciaInterno/salvarVooRequest", output = "http://service/AgenciaInterno/salvarVooResponse")
+    public void salvarVoo(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Voo arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "salvarCidade", targetNamespace = "http://service/", className = "service.SalvarCidade")
+    @ResponseWrapper(localName = "salvarCidadeResponse", targetNamespace = "http://service/", className = "service.SalvarCidadeResponse")
+    @Action(input = "http://service/AgenciaInterno/salvarCidadeRequest", output = "http://service/AgenciaInterno/salvarCidadeResponse")
+    public void salvarCidade(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Cidade arg0);
 
     /**
      * 
@@ -190,16 +169,37 @@ public interface AgenciaInterno {
     /**
      * 
      * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "salvarAdmin", targetNamespace = "http://service/", className = "service.SalvarAdmin")
+    @ResponseWrapper(localName = "salvarAdminResponse", targetNamespace = "http://service/", className = "service.SalvarAdminResponse")
+    @Action(input = "http://service/AgenciaInterno/salvarAdminRequest", output = "http://service/AgenciaInterno/salvarAdminResponse")
+    public void salvarAdmin(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Administrador arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "editarAdmin", targetNamespace = "http://service/", className = "service.EditarAdmin")
+    @ResponseWrapper(localName = "editarAdminResponse", targetNamespace = "http://service/", className = "service.EditarAdminResponse")
+    @Action(input = "http://service/AgenciaInterno/editarAdminRequest", output = "http://service/AgenciaInterno/editarAdminResponse")
+    public void editarAdmin(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Administrador arg0);
+
+    /**
+     * 
      * @return
-     *     returns service.Administrador
+     *     returns java.util.List<service.Administrador>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAdminPorCpf", targetNamespace = "http://service/", className = "service.GetAdminPorCpf")
-    @ResponseWrapper(localName = "getAdminPorCpfResponse", targetNamespace = "http://service/", className = "service.GetAdminPorCpfResponse")
-    @Action(input = "http://service/AgenciaInterno/getAdminPorCpfRequest", output = "http://service/AgenciaInterno/getAdminPorCpfResponse")
-    public Administrador getAdminPorCpf(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+    @RequestWrapper(localName = "listarAdmins", targetNamespace = "http://service/", className = "service.ListarAdmins")
+    @ResponseWrapper(localName = "listarAdminsResponse", targetNamespace = "http://service/", className = "service.ListarAdminsResponse")
+    @Action(input = "http://service/AgenciaInterno/listarAdminsRequest", output = "http://service/AgenciaInterno/listarAdminsResponse")
+    public List<Administrador> listarAdmins();
 
 }

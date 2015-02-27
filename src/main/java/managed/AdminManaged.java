@@ -18,7 +18,7 @@ import service.Passagens;
 
 /**
  *
- * @author Izaquiel
+ * @author Wagner Abreu
  */
 @ManagedBean(name = "Administrador")
 public class AdminManaged {

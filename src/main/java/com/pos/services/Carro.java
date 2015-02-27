@@ -200,7 +200,7 @@ public class Carro {
         int hash = 7;
         hash = 23 * hash + this.id;
         return hash;
-    }
+}
 
     @Override
     public boolean equals(Object obj) {

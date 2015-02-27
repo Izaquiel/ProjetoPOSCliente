@@ -24,34 +24,24 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ListarAdminsResponse_QNAME = new QName("http://service/", "listarAdminsResponse");
-    private final static QName _SalvarAdmin_QNAME = new QName("http://service/", "salvarAdmin");
-    private final static QName _EditarUsuarioResponse_QNAME = new QName("http://service/", "editarUsuarioResponse");
+    private final static QName _GetUsuario_QNAME = new QName("http://service/", "getUsuario");
     private final static QName _GetVooPorIdResponse_QNAME = new QName("http://service/", "getVooPorIdResponse");
-    private final static QName _GetTodosUsuarios_QNAME = new QName("http://service/", "getTodosUsuarios");
-    private final static QName _SalvarAdminResponse_QNAME = new QName("http://service/", "salvarAdminResponse");
-    private final static QName _EditarCidade_QNAME = new QName("http://service/", "editarCidade");
-    private final static QName _EditarCidadeResponse_QNAME = new QName("http://service/", "editarCidadeResponse");
-    private final static QName _SalvarVooResponse_QNAME = new QName("http://service/", "salvarVooResponse");
-    private final static QName _EditarAdminResponse_QNAME = new QName("http://service/", "editarAdminResponse");
-    private final static QName _GetCidadePorId_QNAME = new QName("http://service/", "getCidadePorId");
-    private final static QName _EditarVooResponse_QNAME = new QName("http://service/", "editarVooResponse");
-    private final static QName _ListarPassagens_QNAME = new QName("http://service/", "listarPassagens");
+    private final static QName _GetAdministrador_QNAME = new QName("http://service/", "getAdministrador");
+    private final static QName _VenderPassagem_QNAME = new QName("http://service/", "venderPassagem");
+    private final static QName _GetCidades_QNAME = new QName("http://service/", "getCidades");
+    private final static QName _VenderPassagemResponse_QNAME = new QName("http://service/", "venderPassagemResponse");
+    private final static QName _GetVoosPorDataResponse_QNAME = new QName("http://service/", "getVoosPorDataResponse");
+    private final static QName _GetUsuarioResponse_QNAME = new QName("http://service/", "getUsuarioResponse");
+    private final static QName _SalvarUsuarioResponse_QNAME = new QName("http://service/", "salvarUsuarioResponse");
+    private final static QName _GetCidadesResponse_QNAME = new QName("http://service/", "getCidadesResponse");
+    private final static QName _GetVooResponse_QNAME = new QName("http://service/", "getVooResponse");
+    private final static QName _GetVoo_QNAME = new QName("http://service/", "getVoo");
     private final static QName _GetVooPorId_QNAME = new QName("http://service/", "getVooPorId");
-    private final static QName _GetAdminPorCpfResponse_QNAME = new QName("http://service/", "getAdminPorCpfResponse");
-    private final static QName _GetAdminPorCpf_QNAME = new QName("http://service/", "getAdminPorCpf");
-    private final static QName _SalvarCidade_QNAME = new QName("http://service/", "salvarCidade");
-    private final static QName _SalvarCidadeResponse_QNAME = new QName("http://service/", "salvarCidadeResponse");
-    private final static QName _EditarAdmin_QNAME = new QName("http://service/", "editarAdmin");
-    private final static QName _EditarPassagem_QNAME = new QName("http://service/", "editarPassagem");
-    private final static QName _GetTodosUsuariosResponse_QNAME = new QName("http://service/", "getTodosUsuariosResponse");
-    private final static QName _EditarPassagemResponse_QNAME = new QName("http://service/", "editarPassagemResponse");
-    private final static QName _SalvarVoo_QNAME = new QName("http://service/", "salvarVoo");
-    private final static QName _GetCidadePorIdResponse_QNAME = new QName("http://service/", "getCidadePorIdResponse");
-    private final static QName _EditarUsuario_QNAME = new QName("http://service/", "editarUsuario");
-    private final static QName _ListarPassagensResponse_QNAME = new QName("http://service/", "listarPassagensResponse");
-    private final static QName _ListarAdmins_QNAME = new QName("http://service/", "listarAdmins");
-    private final static QName _EditarVoo_QNAME = new QName("http://service/", "editarVoo");
+    private final static QName _GetAdministradorResponse_QNAME = new QName("http://service/", "getAdministradorResponse");
+    private final static QName _SalvarUsuario_QNAME = new QName("http://service/", "salvarUsuario");
+    private final static QName _GetVoosPorData_QNAME = new QName("http://service/", "getVoosPorData");
+    private final static QName _GetTodosVoos_QNAME = new QName("http://service/", "getTodosVoos");
+    private final static QName _GetTodosVoosResponse_QNAME = new QName("http://service/", "getTodosVoosResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: service
@@ -61,59 +51,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link EditarUsuario }
+     * Create an instance of {@link GetTodosVoosResponse }
      * 
      */
-    public EditarUsuario createEditarUsuario() {
-        return new EditarUsuario();
+    public GetTodosVoosResponse createGetTodosVoosResponse() {
+        return new GetTodosVoosResponse();
     }
 
     /**
-     * Create an instance of {@link SalvarVoo }
+     * Create an instance of {@link GetTodosVoos }
      * 
      */
-    public SalvarVoo createSalvarVoo() {
-        return new SalvarVoo();
+    public GetTodosVoos createGetTodosVoos() {
+        return new GetTodosVoos();
     }
 
     /**
-     * Create an instance of {@link EditarPassagem }
+     * Create an instance of {@link GetVoosPorData }
      * 
      */
-    public EditarPassagem createEditarPassagem() {
-        return new EditarPassagem();
+    public GetVoosPorData createGetVoosPorData() {
+        return new GetVoosPorData();
     }
 
     /**
-     * Create an instance of {@link GetTodosUsuariosResponse }
+     * Create an instance of {@link SalvarUsuario }
      * 
      */
-    public GetTodosUsuariosResponse createGetTodosUsuariosResponse() {
-        return new GetTodosUsuariosResponse();
+    public SalvarUsuario createSalvarUsuario() {
+        return new SalvarUsuario();
     }
 
     /**
-     * Create an instance of {@link SalvarCidadeResponse }
+     * Create an instance of {@link GetAdministradorResponse }
      * 
      */
-    public SalvarCidadeResponse createSalvarCidadeResponse() {
-        return new SalvarCidadeResponse();
+    public GetAdministradorResponse createGetAdministradorResponse() {
+        return new GetAdministradorResponse();
     }
 
     /**
-     * Create an instance of {@link EditarAdmin }
+     * Create an instance of {@link GetVoo }
      * 
      */
-    public EditarAdmin createEditarAdmin() {
-        return new EditarAdmin();
-    }
-
-    /**
-     * Create an instance of {@link SalvarCidade }
-     * 
-     */
-    public SalvarCidade createSalvarCidade() {
-        return new SalvarCidade();
+    public GetVoo createGetVoo() {
+        return new GetVoo();
     }
 
     /**
@@ -125,35 +107,75 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SalvarVooResponse }
+     * Create an instance of {@link GetVooResponse }
      * 
      */
-    public SalvarVooResponse createSalvarVooResponse() {
-        return new SalvarVooResponse();
+    public GetVooResponse createGetVooResponse() {
+        return new GetVooResponse();
     }
 
     /**
-     * Create an instance of {@link EditarAdminResponse }
+     * Create an instance of {@link SalvarUsuarioResponse }
      * 
      */
-    public EditarAdminResponse createEditarAdminResponse() {
-        return new EditarAdminResponse();
+    public SalvarUsuarioResponse createSalvarUsuarioResponse() {
+        return new SalvarUsuarioResponse();
     }
 
     /**
-     * Create an instance of {@link EditarCidadeResponse }
+     * Create an instance of {@link GetCidadesResponse }
      * 
      */
-    public EditarCidadeResponse createEditarCidadeResponse() {
-        return new EditarCidadeResponse();
+    public GetCidadesResponse createGetCidadesResponse() {
+        return new GetCidadesResponse();
     }
 
     /**
-     * Create an instance of {@link GetTodosUsuarios }
+     * Create an instance of {@link GetUsuarioResponse }
      * 
      */
-    public GetTodosUsuarios createGetTodosUsuarios() {
-        return new GetTodosUsuarios();
+    public GetUsuarioResponse createGetUsuarioResponse() {
+        return new GetUsuarioResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetVoosPorDataResponse }
+     * 
+     */
+    public GetVoosPorDataResponse createGetVoosPorDataResponse() {
+        return new GetVoosPorDataResponse();
+    }
+
+    /**
+     * Create an instance of {@link VenderPassagemResponse }
+     * 
+     */
+    public VenderPassagemResponse createVenderPassagemResponse() {
+        return new VenderPassagemResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCidades }
+     * 
+     */
+    public GetCidades createGetCidades() {
+        return new GetCidades();
+    }
+
+    /**
+     * Create an instance of {@link VenderPassagem }
+     * 
+     */
+    public VenderPassagem createVenderPassagem() {
+        return new VenderPassagem();
+    }
+
+    /**
+     * Create an instance of {@link GetAdministrador }
+     * 
+     */
+    public GetAdministrador createGetAdministrador() {
+        return new GetAdministrador();
     }
 
     /**
@@ -165,123 +187,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link EditarVoo }
+     * Create an instance of {@link GetUsuario }
      * 
      */
-    public EditarVoo createEditarVoo() {
-        return new EditarVoo();
-    }
-
-    /**
-     * Create an instance of {@link ListarAdmins }
-     * 
-     */
-    public ListarAdmins createListarAdmins() {
-        return new ListarAdmins();
-    }
-
-    /**
-     * Create an instance of {@link ListarPassagensResponse }
-     * 
-     */
-    public ListarPassagensResponse createListarPassagensResponse() {
-        return new ListarPassagensResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetCidadePorIdResponse }
-     * 
-     */
-    public GetCidadePorIdResponse createGetCidadePorIdResponse() {
-        return new GetCidadePorIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link EditarPassagemResponse }
-     * 
-     */
-    public EditarPassagemResponse createEditarPassagemResponse() {
-        return new EditarPassagemResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetAdminPorCpf }
-     * 
-     */
-    public GetAdminPorCpf createGetAdminPorCpf() {
-        return new GetAdminPorCpf();
-    }
-
-    /**
-     * Create an instance of {@link GetAdminPorCpfResponse }
-     * 
-     */
-    public GetAdminPorCpfResponse createGetAdminPorCpfResponse() {
-        return new GetAdminPorCpfResponse();
-    }
-
-    /**
-     * Create an instance of {@link ListarPassagens }
-     * 
-     */
-    public ListarPassagens createListarPassagens() {
-        return new ListarPassagens();
-    }
-
-    /**
-     * Create an instance of {@link EditarVooResponse }
-     * 
-     */
-    public EditarVooResponse createEditarVooResponse() {
-        return new EditarVooResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetCidadePorId }
-     * 
-     */
-    public GetCidadePorId createGetCidadePorId() {
-        return new GetCidadePorId();
-    }
-
-    /**
-     * Create an instance of {@link EditarCidade }
-     * 
-     */
-    public EditarCidade createEditarCidade() {
-        return new EditarCidade();
-    }
-
-    /**
-     * Create an instance of {@link SalvarAdminResponse }
-     * 
-     */
-    public SalvarAdminResponse createSalvarAdminResponse() {
-        return new SalvarAdminResponse();
-    }
-
-    /**
-     * Create an instance of {@link EditarUsuarioResponse }
-     * 
-     */
-    public EditarUsuarioResponse createEditarUsuarioResponse() {
-        return new EditarUsuarioResponse();
-    }
-
-    /**
-     * Create an instance of {@link SalvarAdmin }
-     * 
-     */
-    public SalvarAdmin createSalvarAdmin() {
-        return new SalvarAdmin();
-    }
-
-    /**
-     * Create an instance of {@link ListarAdminsResponse }
-     * 
-     */
-    public ListarAdminsResponse createListarAdminsResponse() {
-        return new ListarAdminsResponse();
+    public GetUsuario createGetUsuario() {
+        return new GetUsuario();
     }
 
     /**
@@ -293,11 +203,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Passagem }
+     * Create an instance of {@link Pessoa }
      * 
      */
-    public Passagem createPassagem() {
-        return new Passagem();
+    public Pessoa createPessoa() {
+        return new Pessoa();
     }
 
     /**
@@ -309,22 +219,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Voo }
-     * 
-     */
-    public Voo createVoo() {
-        return new Voo();
-    }
-
-    /**
-     * Create an instance of {@link Pessoa }
-     * 
-     */
-    public Pessoa createPessoa() {
-        return new Pessoa();
-    }
-
-    /**
      * Create an instance of {@link Cidade }
      * 
      */
@@ -333,30 +227,20 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarAdminsResponse }{@code >}}
+     * Create an instance of {@link Voo }
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "listarAdminsResponse")
-    public JAXBElement<ListarAdminsResponse> createListarAdminsResponse(ListarAdminsResponse value) {
-        return new JAXBElement<ListarAdminsResponse>(_ListarAdminsResponse_QNAME, ListarAdminsResponse.class, null, value);
+    public Voo createVoo() {
+        return new Voo();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarAdmin }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUsuario }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "salvarAdmin")
-    public JAXBElement<SalvarAdmin> createSalvarAdmin(SalvarAdmin value) {
-        return new JAXBElement<SalvarAdmin>(_SalvarAdmin_QNAME, SalvarAdmin.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarUsuarioResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "editarUsuarioResponse")
-    public JAXBElement<EditarUsuarioResponse> createEditarUsuarioResponse(EditarUsuarioResponse value) {
-        return new JAXBElement<EditarUsuarioResponse>(_EditarUsuarioResponse_QNAME, EditarUsuarioResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getUsuario")
+    public JAXBElement<GetUsuario> createGetUsuario(GetUsuario value) {
+        return new JAXBElement<GetUsuario>(_GetUsuario_QNAME, GetUsuario.class, null, value);
     }
 
     /**
@@ -369,84 +253,93 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetTodosUsuarios }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAdministrador }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getTodosUsuarios")
-    public JAXBElement<GetTodosUsuarios> createGetTodosUsuarios(GetTodosUsuarios value) {
-        return new JAXBElement<GetTodosUsuarios>(_GetTodosUsuarios_QNAME, GetTodosUsuarios.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getAdministrador")
+    public JAXBElement<GetAdministrador> createGetAdministrador(GetAdministrador value) {
+        return new JAXBElement<GetAdministrador>(_GetAdministrador_QNAME, GetAdministrador.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarAdminResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VenderPassagem }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "salvarAdminResponse")
-    public JAXBElement<SalvarAdminResponse> createSalvarAdminResponse(SalvarAdminResponse value) {
-        return new JAXBElement<SalvarAdminResponse>(_SalvarAdminResponse_QNAME, SalvarAdminResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "venderPassagem")
+    public JAXBElement<VenderPassagem> createVenderPassagem(VenderPassagem value) {
+        return new JAXBElement<VenderPassagem>(_VenderPassagem_QNAME, VenderPassagem.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarCidade }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCidades }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "editarCidade")
-    public JAXBElement<EditarCidade> createEditarCidade(EditarCidade value) {
-        return new JAXBElement<EditarCidade>(_EditarCidade_QNAME, EditarCidade.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getCidades")
+    public JAXBElement<GetCidades> createGetCidades(GetCidades value) {
+        return new JAXBElement<GetCidades>(_GetCidades_QNAME, GetCidades.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarCidadeResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VenderPassagemResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "editarCidadeResponse")
-    public JAXBElement<EditarCidadeResponse> createEditarCidadeResponse(EditarCidadeResponse value) {
-        return new JAXBElement<EditarCidadeResponse>(_EditarCidadeResponse_QNAME, EditarCidadeResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "venderPassagemResponse")
+    public JAXBElement<VenderPassagemResponse> createVenderPassagemResponse(VenderPassagemResponse value) {
+        return new JAXBElement<VenderPassagemResponse>(_VenderPassagemResponse_QNAME, VenderPassagemResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarVooResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetVoosPorDataResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "salvarVooResponse")
-    public JAXBElement<SalvarVooResponse> createSalvarVooResponse(SalvarVooResponse value) {
-        return new JAXBElement<SalvarVooResponse>(_SalvarVooResponse_QNAME, SalvarVooResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getVoosPorDataResponse")
+    public JAXBElement<GetVoosPorDataResponse> createGetVoosPorDataResponse(GetVoosPorDataResponse value) {
+        return new JAXBElement<GetVoosPorDataResponse>(_GetVoosPorDataResponse_QNAME, GetVoosPorDataResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarAdminResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUsuarioResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "editarAdminResponse")
-    public JAXBElement<EditarAdminResponse> createEditarAdminResponse(EditarAdminResponse value) {
-        return new JAXBElement<EditarAdminResponse>(_EditarAdminResponse_QNAME, EditarAdminResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getUsuarioResponse")
+    public JAXBElement<GetUsuarioResponse> createGetUsuarioResponse(GetUsuarioResponse value) {
+        return new JAXBElement<GetUsuarioResponse>(_GetUsuarioResponse_QNAME, GetUsuarioResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCidadePorId }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarUsuarioResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getCidadePorId")
-    public JAXBElement<GetCidadePorId> createGetCidadePorId(GetCidadePorId value) {
-        return new JAXBElement<GetCidadePorId>(_GetCidadePorId_QNAME, GetCidadePorId.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "salvarUsuarioResponse")
+    public JAXBElement<SalvarUsuarioResponse> createSalvarUsuarioResponse(SalvarUsuarioResponse value) {
+        return new JAXBElement<SalvarUsuarioResponse>(_SalvarUsuarioResponse_QNAME, SalvarUsuarioResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarVooResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCidadesResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "editarVooResponse")
-    public JAXBElement<EditarVooResponse> createEditarVooResponse(EditarVooResponse value) {
-        return new JAXBElement<EditarVooResponse>(_EditarVooResponse_QNAME, EditarVooResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getCidadesResponse")
+    public JAXBElement<GetCidadesResponse> createGetCidadesResponse(GetCidadesResponse value) {
+        return new JAXBElement<GetCidadesResponse>(_GetCidadesResponse_QNAME, GetCidadesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPassagens }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetVooResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "listarPassagens")
-    public JAXBElement<ListarPassagens> createListarPassagens(ListarPassagens value) {
-        return new JAXBElement<ListarPassagens>(_ListarPassagens_QNAME, ListarPassagens.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getVooResponse")
+    public JAXBElement<GetVooResponse> createGetVooResponse(GetVooResponse value) {
+        return new JAXBElement<GetVooResponse>(_GetVooResponse_QNAME, GetVooResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetVoo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "getVoo")
+    public JAXBElement<GetVoo> createGetVoo(GetVoo value) {
+        return new JAXBElement<GetVoo>(_GetVoo_QNAME, GetVoo.class, null, value);
     }
 
     /**
@@ -459,129 +352,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAdminPorCpfResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAdministradorResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getAdminPorCpfResponse")
-    public JAXBElement<GetAdminPorCpfResponse> createGetAdminPorCpfResponse(GetAdminPorCpfResponse value) {
-        return new JAXBElement<GetAdminPorCpfResponse>(_GetAdminPorCpfResponse_QNAME, GetAdminPorCpfResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getAdministradorResponse")
+    public JAXBElement<GetAdministradorResponse> createGetAdministradorResponse(GetAdministradorResponse value) {
+        return new JAXBElement<GetAdministradorResponse>(_GetAdministradorResponse_QNAME, GetAdministradorResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAdminPorCpf }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarUsuario }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getAdminPorCpf")
-    public JAXBElement<GetAdminPorCpf> createGetAdminPorCpf(GetAdminPorCpf value) {
-        return new JAXBElement<GetAdminPorCpf>(_GetAdminPorCpf_QNAME, GetAdminPorCpf.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "salvarUsuario")
+    public JAXBElement<SalvarUsuario> createSalvarUsuario(SalvarUsuario value) {
+        return new JAXBElement<SalvarUsuario>(_SalvarUsuario_QNAME, SalvarUsuario.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarCidade }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetVoosPorData }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "salvarCidade")
-    public JAXBElement<SalvarCidade> createSalvarCidade(SalvarCidade value) {
-        return new JAXBElement<SalvarCidade>(_SalvarCidade_QNAME, SalvarCidade.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getVoosPorData")
+    public JAXBElement<GetVoosPorData> createGetVoosPorData(GetVoosPorData value) {
+        return new JAXBElement<GetVoosPorData>(_GetVoosPorData_QNAME, GetVoosPorData.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarCidadeResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetTodosVoos }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "salvarCidadeResponse")
-    public JAXBElement<SalvarCidadeResponse> createSalvarCidadeResponse(SalvarCidadeResponse value) {
-        return new JAXBElement<SalvarCidadeResponse>(_SalvarCidadeResponse_QNAME, SalvarCidadeResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getTodosVoos")
+    public JAXBElement<GetTodosVoos> createGetTodosVoos(GetTodosVoos value) {
+        return new JAXBElement<GetTodosVoos>(_GetTodosVoos_QNAME, GetTodosVoos.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarAdmin }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetTodosVoosResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "editarAdmin")
-    public JAXBElement<EditarAdmin> createEditarAdmin(EditarAdmin value) {
-        return new JAXBElement<EditarAdmin>(_EditarAdmin_QNAME, EditarAdmin.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarPassagem }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "editarPassagem")
-    public JAXBElement<EditarPassagem> createEditarPassagem(EditarPassagem value) {
-        return new JAXBElement<EditarPassagem>(_EditarPassagem_QNAME, EditarPassagem.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetTodosUsuariosResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "getTodosUsuariosResponse")
-    public JAXBElement<GetTodosUsuariosResponse> createGetTodosUsuariosResponse(GetTodosUsuariosResponse value) {
-        return new JAXBElement<GetTodosUsuariosResponse>(_GetTodosUsuariosResponse_QNAME, GetTodosUsuariosResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarPassagemResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "editarPassagemResponse")
-    public JAXBElement<EditarPassagemResponse> createEditarPassagemResponse(EditarPassagemResponse value) {
-        return new JAXBElement<EditarPassagemResponse>(_EditarPassagemResponse_QNAME, EditarPassagemResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SalvarVoo }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "salvarVoo")
-    public JAXBElement<SalvarVoo> createSalvarVoo(SalvarVoo value) {
-        return new JAXBElement<SalvarVoo>(_SalvarVoo_QNAME, SalvarVoo.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCidadePorIdResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "getCidadePorIdResponse")
-    public JAXBElement<GetCidadePorIdResponse> createGetCidadePorIdResponse(GetCidadePorIdResponse value) {
-        return new JAXBElement<GetCidadePorIdResponse>(_GetCidadePorIdResponse_QNAME, GetCidadePorIdResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarUsuario }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "editarUsuario")
-    public JAXBElement<EditarUsuario> createEditarUsuario(EditarUsuario value) {
-        return new JAXBElement<EditarUsuario>(_EditarUsuario_QNAME, EditarUsuario.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPassagensResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "listarPassagensResponse")
-    public JAXBElement<ListarPassagensResponse> createListarPassagensResponse(ListarPassagensResponse value) {
-        return new JAXBElement<ListarPassagensResponse>(_ListarPassagensResponse_QNAME, ListarPassagensResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarAdmins }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "listarAdmins")
-    public JAXBElement<ListarAdmins> createListarAdmins(ListarAdmins value) {
-        return new JAXBElement<ListarAdmins>(_ListarAdmins_QNAME, ListarAdmins.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditarVoo }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "editarVoo")
-    public JAXBElement<EditarVoo> createEditarVoo(EditarVoo value) {
-        return new JAXBElement<EditarVoo>(_EditarVoo_QNAME, EditarVoo.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getTodosVoosResponse")
+    public JAXBElement<GetTodosVoosResponse> createGetTodosVoosResponse(GetTodosVoosResponse value) {
+        return new JAXBElement<GetTodosVoosResponse>(_GetTodosVoosResponse_QNAME, GetTodosVoosResponse.class, null, value);
     }
 
 }

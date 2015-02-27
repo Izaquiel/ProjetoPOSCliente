@@ -36,8 +36,8 @@ import javax.xml.bind.annotation.XmlType;
 public class Passagem {
 
     protected long id;
-    protected Usuario usuario;
-    protected Voo voo;
+    protected Usuario usuario = new Usuario();
+    protected Voo voo = new Voo();
 
     /**
      * Gets the value of the id property.

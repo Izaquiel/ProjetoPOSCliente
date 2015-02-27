@@ -28,75 +28,18 @@ public interface AgenciaService {
 
     /**
      * 
+     * @param arg0
      * @return
      *     returns java.util.List<service.Voo>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTodosVoos", targetNamespace = "http://service/", className = "service.GetTodosVoos")
-    @ResponseWrapper(localName = "getTodosVoosResponse", targetNamespace = "http://service/", className = "service.GetTodosVoosResponse")
-    @Action(input = "http://service/AgenciaService/getTodosVoosRequest", output = "http://service/AgenciaService/getTodosVoosResponse")
-    public List<Voo> getTodosVoos();
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<service.Cidade>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCidades", targetNamespace = "http://service/", className = "service.GetCidades")
-    @ResponseWrapper(localName = "getCidadesResponse", targetNamespace = "http://service/", className = "service.GetCidadesResponse")
-    @Action(input = "http://service/AgenciaService/getCidadesRequest", output = "http://service/AgenciaService/getCidadesResponse")
-    public List<Cidade> getCidades();
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns service.Voo
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getVoo", targetNamespace = "http://service/", className = "service.GetVoo")
-    @ResponseWrapper(localName = "getVooResponse", targetNamespace = "http://service/", className = "service.GetVooResponse")
-    @Action(input = "http://service/AgenciaService/getVooRequest", output = "http://service/AgenciaService/getVooResponse")
-    public Voo getVoo(
+    @RequestWrapper(localName = "getVoosPorData", targetNamespace = "http://service/", className = "service.GetVoosPorData")
+    @ResponseWrapper(localName = "getVoosPorDataResponse", targetNamespace = "http://service/", className = "service.GetVoosPorDataResponse")
+    @Action(input = "http://service/AgenciaService/getVoosPorDataRequest", output = "http://service/AgenciaService/getVoosPorDataResponse")
+    public List<Voo> getVoosPorData(
         @WebParam(name = "arg0", targetNamespace = "")
-        long arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        long arg1);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "salvarUsuario", targetNamespace = "http://service/", className = "service.SalvarUsuario")
-    @ResponseWrapper(localName = "salvarUsuarioResponse", targetNamespace = "http://service/", className = "service.SalvarUsuarioResponse")
-    @Action(input = "http://service/AgenciaService/salvarUsuarioRequest", output = "http://service/AgenciaService/salvarUsuarioResponse")
-    public boolean salvarUsuario(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Usuario arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns service.Usuario
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getUsuario", targetNamespace = "http://service/", className = "service.GetUsuario")
-    @ResponseWrapper(localName = "getUsuarioResponse", targetNamespace = "http://service/", className = "service.GetUsuarioResponse")
-    @Action(input = "http://service/AgenciaService/getUsuarioRequest", output = "http://service/AgenciaService/getUsuarioResponse")
-    public Usuario getUsuario(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        XMLGregorianCalendar arg0);
 
     /**
      * 
@@ -136,17 +79,89 @@ public interface AgenciaService {
 
     /**
      * 
-     * @param arg0
      * @return
      *     returns java.util.List<service.Voo>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getVoosPorData", targetNamespace = "http://service/", className = "service.GetVoosPorData")
-    @ResponseWrapper(localName = "getVoosPorDataResponse", targetNamespace = "http://service/", className = "service.GetVoosPorDataResponse")
-    @Action(input = "http://service/AgenciaService/getVoosPorDataRequest", output = "http://service/AgenciaService/getVoosPorDataResponse")
-    public List<Voo> getVoosPorData(
+    @RequestWrapper(localName = "getTodosVoos", targetNamespace = "http://service/", className = "service.GetTodosVoos")
+    @ResponseWrapper(localName = "getTodosVoosResponse", targetNamespace = "http://service/", className = "service.GetTodosVoosResponse")
+    @Action(input = "http://service/AgenciaService/getTodosVoosRequest", output = "http://service/AgenciaService/getTodosVoosResponse")
+    public List<Voo> getTodosVoos();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<service.Cidade>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCidades", targetNamespace = "http://service/", className = "service.GetCidades")
+    @ResponseWrapper(localName = "getCidadesResponse", targetNamespace = "http://service/", className = "service.GetCidadesResponse")
+    @Action(input = "http://service/AgenciaService/getCidadesRequest", output = "http://service/AgenciaService/getCidadesResponse")
+    public List<Cidade> getCidades();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "salvarUsuario", targetNamespace = "http://service/", className = "service.SalvarUsuario")
+    @ResponseWrapper(localName = "salvarUsuarioResponse", targetNamespace = "http://service/", className = "service.SalvarUsuarioResponse")
+    @Action(input = "http://service/AgenciaService/salvarUsuarioRequest", output = "http://service/AgenciaService/salvarUsuarioResponse")
+    public boolean salvarUsuario(
         @WebParam(name = "arg0", targetNamespace = "")
-        XMLGregorianCalendar arg0);
+        Usuario arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns service.Voo
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getVooPorId", targetNamespace = "http://service/", className = "service.GetVooPorId")
+    @ResponseWrapper(localName = "getVooPorIdResponse", targetNamespace = "http://service/", className = "service.GetVooPorIdResponse")
+    @Action(input = "http://service/AgenciaService/getVooPorIdRequest", output = "http://service/AgenciaService/getVooPorIdResponse")
+    public Voo getVooPorId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        long arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns service.Voo
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getVoo", targetNamespace = "http://service/", className = "service.GetVoo")
+    @ResponseWrapper(localName = "getVooResponse", targetNamespace = "http://service/", className = "service.GetVooResponse")
+    @Action(input = "http://service/AgenciaService/getVooRequest", output = "http://service/AgenciaService/getVooResponse")
+    public Voo getVoo(
+        @WebParam(name = "arg0", targetNamespace = "")
+        long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        long arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns service.Usuario
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUsuario", targetNamespace = "http://service/", className = "service.GetUsuario")
+    @ResponseWrapper(localName = "getUsuarioResponse", targetNamespace = "http://service/", className = "service.GetUsuarioResponse")
+    @Action(input = "http://service/AgenciaService/getUsuarioRequest", output = "http://service/AgenciaService/getUsuarioResponse")
+    public Usuario getUsuario(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
 }

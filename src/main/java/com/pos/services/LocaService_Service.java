@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "LocaService", targetNamespace = "http://services.pos.com/", wsdlLocation = "http://localhost:8080/LocaCar-App/LocaService?WSDL")
+@WebServiceClient(name = "LocaService", targetNamespace = "http://services.pos.com/", wsdlLocation = "http://192.168.43.243:8080/LocaCar-App/LocaService?WSDL")
 public class LocaService_Service
     extends Service
 {
@@ -30,7 +30,7 @@ public class LocaService_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/LocaCar-App/LocaService?WSDL");
+            url = new URL("http://192.168.43.243:8080/LocaCar-App/LocaService?WSDL");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
